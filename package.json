@@ -1,0 +1,24 @@
+{
+  "name": "hackathon-2020",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start",
+    "generate": "nuxt-ts generate"
+  },
+  "dependencies": {
+    "@nuxt/typescript-runtime": "^2.0.0",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "core-js": "^3.6.5",
+    "material-icons": "^0.5.1",
+    "nuxt": "^2.14.6",
+    "vue-resource": "^1.5.1",
+    "vuesax": "^3.12.2"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.14.6",
+    "@nuxt/typescript-build": "^2.0.3"
+  }
+}

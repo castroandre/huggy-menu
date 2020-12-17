@@ -1,0 +1,75 @@
+header {
+  display:block;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:white;
+  text-align:center;
+  padding: 10px 0;
+}
+body {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background: #ededed;
+}
+footer {
+  display:block;
+  position:fixed;
+  width:100%;
+  bottom:0vh;
+  left:0;
+  background:white;
+  text-align:center;
+  padding: 10px 0;
+}
+.o-header {
+  z-index: 10;
+  border-bottom: 1px solid #5f7fcb;
+}
+.o-header .title {
+  background: -webkit-linear-gradient(rgb(31 116 255 / 1), rgb(31 116 255 / .5));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgb(0 0 0 / .3);
+}
+
+.o-footer {
+  border-top: 1px solid #5f7fcb;
+}
+
+h3 {
+  font-family:
+    'Quicksand',
+    'Source Sans Pro',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  font-weight: 400;
+  margin: 10px;
+}
+.content {
+  padding: 10px;
+}
+.vs-col {
+  padding: 5px;
+}
+.vs-card--content {
+  margin-bottom: 0;
+}
+.vs-card--media, .vs-card--footer {
+  border-radius: 10px;
+}
+.vs-popup--title {
+  text-align: left;
+}
+.details-img {
+  width: 100%;
+  height: 100%;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
