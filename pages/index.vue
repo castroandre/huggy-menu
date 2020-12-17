@@ -214,7 +214,8 @@ export default {
     },
     details: false,
     url: '',
-    chatID: ''
+    chatID: '',
+    name: ''
   }),
   mounted() {
     this.init();
@@ -223,6 +224,7 @@ export default {
     init() {
       this.chatID = this.getParam('chatID');
       this.url = this.getParam('url');
+      this.name = this.getParam('name');
     },
     openDetails(product: any) {
       this.product = product;
@@ -232,23 +234,25 @@ export default {
       return this.products.filter(product => +product.qtd > 0);
     },
     formatData() {
-      let total = 0;
-      let resume = 'Pedido: \n';
+      let amount = 0;
+      let resume = '**Pedido:** \n';
 
       this.productsSelected.forEach(product => {
         const value = product.value * product.qtd;
         const valueFormated = value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-        total += product.value * product.qtd;
-        resume += `\n ${product.qtd} x ${product.name} (${product.value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}) - total: ${valueFormated}`;
+        amount += product.value * product.qtd;
+        resume += `\n ${product.qtd}x ${product.name} (_${product.value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}_) - ${valueFormated}`;
       });
+      "**Pedido:** \n 2x Hamburger 1 (_R$ 22,00_) - \n R$ 45,80 \n 1x Coca Cola 1L (_R$ 7,00_) - \n R$ 7,00 \n **Valor total do pedido: R$ 52,80**"
 
-      resume += `\n\n Valor total do pedido: ${total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`;
+      resume += `\n\n **Valor total do pedido: ${amount.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}**`;
 
       return {
+        amount,
+        name: this.name,
         chatID: this.chatID,
-        products: this.productsSelected,
-        total,
-        resume
+        resume,
+        products: this.productsSelected
       }
 
     },
