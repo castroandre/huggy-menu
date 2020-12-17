@@ -267,6 +267,7 @@ export default {
 
       vm.$vs.loading({ type:'material' });
 
+
       new MenuService(vm.$http)
         .save(vm.formatData())
         .then(function(res) {
