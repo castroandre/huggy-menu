@@ -60,7 +60,7 @@ export default {
     products: [
       {
         id: 101,
-        name: "Higgor Burger",
+        name: "Higgor Burger ",
         description: "Pão brioche, burger de 150g, creme de queijo, farofa de bacon no pão.",
         image: "/product_101.png",
         value: 29.99,
