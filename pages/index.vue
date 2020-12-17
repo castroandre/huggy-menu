@@ -265,15 +265,10 @@ export default {
         return false;
       }
 
-      const data = vm.formatData();
-
-      console.log(data);
-      return false;
-
       vm.$vs.loading({ type:'material' });
 
       new MenuService(vm.$http)
-        .get()
+        .save(vm.formatData())
         .then(function(res) {
           console.log('res', res)
           window.location = vm.url;
