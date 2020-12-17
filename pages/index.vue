@@ -48,8 +48,10 @@
 
 <script lang="ts">
 import Vue from "vue";
+import Component from "vue-class-component";
 import { MenuService } from "~/domain/services/MenuService";
 
+@Component
 export default class Index extends Vue {
   public $vs: any;
   private products: Array<any> = [
@@ -227,7 +229,7 @@ export default class Index extends Vue {
     this.details = true;
   }
 
-  getProductsSelected(): any {
+  getProductsSelected() {
     return this.products.filter(product => +product.qtd > 0);
   }
 
