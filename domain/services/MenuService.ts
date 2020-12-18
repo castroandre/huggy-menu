@@ -15,7 +15,7 @@ export class MenuService {
   }
 
   save(data: any) {
-    return this._resource.post(`${process.env.API_URL}`, data).then((response: any) => {
+    return this._resource.post(this._route, data).then((response: any) => {
       if (response.body) return response.body;
       return response;
     });
