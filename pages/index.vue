@@ -247,13 +247,15 @@ export default class Index extends Vue {
 
     resume += `\n\n **Valor total do pedido: ${amount.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}**`;
 
-    return {
+    let data = {
       amount,
       name: this.name,
       chatID: this.chatID,
       resume,
       products: this.productsSelected
     }
+
+    return JSON.stringify(data);
   }
 
   save() {
