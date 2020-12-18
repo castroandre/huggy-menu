@@ -15,7 +15,14 @@ export class MenuService {
   }
 
   save(data: any) {
-    return this._resource.post(this._route, data).then((response: any) => {
+    return fetch(this._route, {
+      method: 'POST',
+      body: data,
+      mode: 'no-cors',
+      headers: {
+          'Content-Type': 'text/plain;charset=utf-8'
+      }
+    }).then((response: any) => {
       if (response.body) return response.body;
       return response;
     });
