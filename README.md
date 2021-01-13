@@ -1,4 +1,4 @@
-# Hackathon 2020 - Huggy
+# Huggy Menu - Hackathon 2020
 
 ## Build Setup
 
